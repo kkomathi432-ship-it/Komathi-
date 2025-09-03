@@ -1,0 +1,158 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio - Komathi P</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      color: gold;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .project {
+      background: white;
+      margin: 15px auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: gold;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Komathi. P</h1>
+    <p>Computer Science Student</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate Computer Science student interested in web development, machine learning, and open-source projects.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>A simple weather application using OpenWeatherMap API.</p>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>This portfolio is a showcase of my work and skills using HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Komathi. P | All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Form validation and status message
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name && email && message) {
+        status.style.color = "green";
+        status.textContent = "✅ Message sent successfully!";
+        form.reset();
+      } else {
+        status.style.color = "red";
+        status.textContent = "❌ Please fill all fields correctly.";
+      }
+    });
+  </script>
+</body>
+</html>
