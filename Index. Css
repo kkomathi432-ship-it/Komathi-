@@ -1,0 +1,108 @@
+General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
+header h1 {
+  color: black;  /* Center black colour font */
+  font-family: Blaki, Arial, sans-serif;
+}
+
+header h2 {
+  color: deeppink; /* Dark pink blinking */
+  font-family: Blaki, Arial, sans-serif;
+}
+
+/* Blinking effect */
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #444;
+  padding: 10px;
+}
+
+nav a {
+  color: darkgoldenrod; /* Dark gold font */
+  font-family: Blaki, Arial, sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+.project {
+  background: white;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Contact form */
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: gold;
+  color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: white;
+}
